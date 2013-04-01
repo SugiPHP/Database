@@ -1,8 +1,8 @@
 {
-    "name": "sugiphp/events",
+    "name": "sugiphp/database",
     "type": "library",
-    "description": "Observer design pattern-like events system",
-    "keywords": ["observer", "event", "dispatcher"],
+    "description": "Database abstraction layer",
+    "keywords": ["database", "PDO", "mysql", "pgsql", "sqlite"],
     "licence": "MIT",
     "authors": [
         {
@@ -15,9 +15,9 @@
     },
     "autoload": {
         "psr-0": { 
-            "SugiPHP\\Events\\": ""
+            "SugiPHP\\Database\\": ""
         }
     },
-    "target-dir": "SugiPHP/Events",
+    "target-dir": "SugiPHP/Database",
     "minimum-stability": "dev"
 }
