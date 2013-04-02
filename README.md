@@ -24,10 +24,10 @@ query() method is used for all CRUD routines. If a query fails the method will r
 
 And finally one note. You can use these drivers directly, but since they are very lightweight, they are limited in what they do. Instead you should use SugiPHP\Database to access much more functionality.
 
-SugiPHP\Database\DB
+SugiPHP\Database\Database
 -------------------------
 
-SugiPHP\Database\DB acts as a second level of abstraction. It uses DriverInterface drivers as a base and extends functionality.
+SugiPHP\Database\Database acts as a second level of abstraction. It uses DriverInterface drivers as a base and extends functionality.
  - construct providing a DriverInterface or the Database can factory itself giving one array as a parameter.
  - database connection is not established on creation. This give you ability to instantiate SugiPHP\Database very early in the application.
  - connection is automatically established when it's really necessary - first time when you execute any database operation.

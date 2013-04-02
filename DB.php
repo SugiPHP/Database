@@ -8,7 +8,7 @@
 
 namespace SugiPHP\Database;
 
-class DB
+class Database
 {
 	/**
 	 * Database driver instance.
