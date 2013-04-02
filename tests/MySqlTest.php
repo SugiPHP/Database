@@ -7,23 +7,18 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-use SugiPHP\Database\SQLiteDriver as DB;
+use SugiPHP\Database\MySqlDriver as DB;
 
-class SQLiteTest extends PHPUnit_Framework_TestCase
+class MySqlTest extends PHPUnit_Framework_TestCase
 {
-	function testCreateWithDBname()
-	{
-		$db = new DB(":memory:");
-	}
-
 	function testCreateWithArray()
 	{
-		$db = new DB(array("database" => ":memory:"));
+		$db = new DB(array("database" => "test"));
 	}
 
 	function testCreateWithSQLite3Object()
 	{
-		$db = new DB(new SQLite3(":memory:"));
+		$db = new DB(new MySQLi());
 	}
 
 	/**
@@ -31,6 +26,6 @@ class SQLiteTest extends PHPUnit_Framework_TestCase
 	 */
 	function testCreateWithIllegalParam()
 	{
-		$db = new DB(3);
+		$db = new DB("string");
 	}
 }

@@ -8,7 +8,7 @@
 
 namespace SugiPHP\Database;
 
-class SQLite implements DriverInterface
+class SQLiteDriver implements DriverInterface
 {
 	/**
 	 * SQLite3 handle
@@ -17,7 +17,6 @@ class SQLite implements DriverInterface
 	 */
 	protected $dbHandle;
 
-
 	/**
 	 * Database connection parameters.
 	 * 
@@ -25,7 +24,6 @@ class SQLite implements DriverInterface
 	 */
 	protected $params = array();
 
-	
 	/**
 	 * Constructor.
 	 * 
@@ -37,10 +35,8 @@ class SQLite implements DriverInterface
 			$this->params["database"] = $database;
 		} elseif (is_array($database)) {
 			$this->params = $database;
-		} elseif (is_object($database) and ($database instanceof \SQLite3)) {
-			$this->dbHandle = $database;
 		} else {
-			throw new Exception("Invalid SQLite constructor parameter", "internal_error");
+			$this->setHandle($database);
 		}
 	}
 
