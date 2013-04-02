@@ -70,7 +70,7 @@ class Database
 	 */
 	public function close()
 	{
-		if ($this->driver->getHandle) {
+		if ($this->driver->getHandle()) {
 			$this->triggerAction("pre", "close");
 			$this->driver->close();
 			$this->triggerAction("post", "close");
