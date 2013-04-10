@@ -94,7 +94,7 @@ class PgSqlDriver implements DriverInterface
 	 */
 	public function escape($param)
 	{
-		return \pg_escape_string($this->dbHandle, $item);
+		return \pg_escape_string($this->dbHandle, $param);
 	}
 
 	/**
