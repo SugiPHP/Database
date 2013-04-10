@@ -54,6 +54,16 @@ class Database
 	}
 
 	/**
+	 * Returns the driver in use.
+	 * 
+	 * @return DriverInterface
+	 */
+	public function getDriver()
+	{
+		return $this->driver;
+	}
+
+	/**
 	 * Opens connection to the database
 	 */
 	public function open()
