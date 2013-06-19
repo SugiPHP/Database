@@ -304,6 +304,7 @@ class Database
 		$return = array();
 		foreach ($values as $key => $value) {
 			if (is_null($value)) $value = "null";
+			elseif (is_numeric($value)) $value = "'" . $value "'";
 			elseif (is_bool($value)) $value = $value ? "TRUE" : "FALSE";
 			else $value = "'" . $this->escape($value) . "'";
 			$return[$key] = $value;
