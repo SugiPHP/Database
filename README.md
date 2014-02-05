@@ -1,7 +1,11 @@
 Database
 ========
 
-SugiPHP\Database is a lighweight interface for accessing databases.
+SugiPHP\Database is a lightweight interface for accessing databases.
+
+TODO
+----
+ - Support for PDO
 
 DriverInterface
 ---------------
@@ -42,4 +46,4 @@ SugiPHP\Database\Exception defines an exception type:
  - internal_error - typically on SugiPHP\Database creation - missing or invalid parameters, wrong database driver type, invalid handles, etc.
  - connection_error - database connection errors
  - sql_error - errors in database queries
- - resource_error - errors while fetching data, etc. providing wrong resource, typically after mismatched SQL queries 
+ - resource_error - errors while fetching data, etc. providing wrong resource, typically after mismatched SQL queries
