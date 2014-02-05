@@ -3,10 +3,6 @@ Database
 
 SugiPHP\Database is a lightweight interface for accessing databases.
 
-TODO
-----
- - Support for PDO
-
 DriverInterface
 ---------------
 
