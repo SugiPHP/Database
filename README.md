@@ -1,4 +1,4 @@
-Database
+Database (discontinued, please use PDO)
 ========
 
 SugiPHP\Database is a lightweight interface for accessing databases.
