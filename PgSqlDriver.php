@@ -67,6 +67,7 @@ class PgSqlDriver implements DriverInterface
 		// before connection we want to handle errors/warnings and convert 
 		// them to SugiPHP\Database\Exception
 		set_error_handler(function($errno, $errstr, $errfile, $errline) {
+			restore_error_handler();
 			throw new Exception($errstr, "connection_error");
 		});
 		// establish connection
